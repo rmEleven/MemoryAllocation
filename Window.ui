@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>443</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item row="0" column="1">
+     <widget class="QFrame" name="frame_view">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+	background-color: rgb(211, 211, 211)
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="memory_tableWidget">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>250</height>
+          </size>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>内存块编号</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>内存块内容</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="instrcution_count_label">
+         <property name="text">
+          <string>执行第0条指令</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="instruction_num_label">
+         <property name="text">
+          <string>当前指令编号：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="instruction_page_num_label">
+         <property name="text">
+          <string>当前指令页号：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="instruction_page_offset_label">
+         <property name="text">
+          <string>当前指令页内偏移：</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame_control">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+	background-color: rgb(211, 211, 211)
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="instructions_label">
+         <property name="text">
+          <string>指令总数：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="instructions_lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="page_capacity_label">
+         <property name="text">
+          <string>页大小：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="page_capacity_lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="total_blocks_label">
+         <property name="text">
+          <string>内存块数：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="total_blocks_lineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="select_algorithm_label">
+         <property name="text">
+          <string>算法选择：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="FIFO_pushButton">
+         <property name="text">
+          <string>FIFO</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="LRU_pushButton">
+         <property name="text">
+          <string>LRU</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="selected_algorithm_label">
+         <property name="text">
+          <string>当前算法：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>开始</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="page_fault_count_label">
+         <property name="text">
+          <string>缺页数：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="page_fault_rate_label">
+         <property name="text">
+          <string>缺页率：</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
