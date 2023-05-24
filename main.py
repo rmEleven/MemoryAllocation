@@ -3,6 +3,8 @@ from Memory import *
 from Ui_Window import *
 
 import sys
+import time
+
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 
@@ -58,6 +60,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             instruction = myTask.get_instruction()
             self.instrcution_count_label.setText(f"执行第{myTask.executed_instructions}条指令")
             self.instruction_num_label.setText(f"当前指令编号：{instruction}")
+            
+            QApplication.processEvents()  # 处理待处理的事件
+            time.sleep(1)  # 暂停1秒
 
             # 在内存中寻找指令
             page_index, page_offset = myMemory.find_instruction(instruction)
