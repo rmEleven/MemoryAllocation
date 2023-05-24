@@ -62,7 +62,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.instruction_num_label.setText(f"当前指令编号：{instruction}")
             
             QApplication.processEvents()  # 处理待处理的事件
-            time.sleep(1)  # 暂停1秒
+            time.sleep(0.2)               # 暂停0.2秒
 
             # 在内存中寻找指令
             page_index, page_offset = myMemory.find_instruction(instruction)
@@ -97,8 +97,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.page_fault_count_label.setText(f"缺页数：{myMemory.page_fault_count}")
         
         self.page_fault_rate_label.setText(f"缺页率：{myMemory.page_fault_count / self.TOTAL_INSTRUCTIONS: .2%}")
-
-
 
 
 if __name__ == "__main__":
